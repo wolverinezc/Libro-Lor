@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Libro PDF - Compra segura</title>
+  <meta name="description" content="Compra el libro en PDF y descargalo automáticamente tras el pago." />
+  <link rel="stylesheet" href="./css/site.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">📘</div>
+        <div class="brand__text">
+          <strong>Mi Libro</strong>
+          <span>Entrega automática</span>
+        </div>
+      </div>
+      <a class="btn btn--ghost" href="#faq">Cómo funciona</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero__grid">
+        <div>
+          <h1>Comprá el libro en PDF y descargalo al instante</h1>
+          <p class="muted">
+            Pagás con MercadoPago y al finalizar se habilita la descarga automáticamente (sin crear cuenta).
+          </p>
+
+          <ul class="bullets">
+            <li>✅ Pago con MercadoPago</li>
+            <li>✅ Descarga automática tras pago aprobado</li>
+            <li>✅ Link de descarga con expiración</li>
+          </ul>
+
+          <div class="card formcard">
+            <label class="field">
+              <span>Email (opcional, recomendado)</span>
+              <input id="email" type="email" placeholder="tu@email.com" autocomplete="email" />
+              <small class="muted">Si lo ponés, queda asociado a tu compra (útil si necesitás soporte).</small>
+            </label>
+
+            <div class="row">
+              <button id="btnBuy" class="btn btn--primary" type="button">
+                Comprar con MercadoPago
+              </button>
+              <div id="priceTag" class="tag">ARS $ —</div>
+            </div>
+
+            <p id="status" class="status muted"></p>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card preview">
+            <div class="card__head">
+              <h2>Qué incluye</h2>
+              <p class="muted">Ejemplo de presentación</p>
+            </div>
+            <div class="card__body">
+              <div class="mini">
+                <div class="mini__item"><strong>+120</strong><span class="muted">páginas</span></div>
+                <div class="mini__item"><strong>Guías</strong><span class="muted">paso a paso</span></div>
+                <div class="mini__item"><strong>PDF</strong><span class="muted">descargable</span></div>
+              </div>
+              <div class="line"></div>
+              <p class="muted">
+                Agregá acá el texto real del libro: para quién es, qué problema resuelve, resultados, etc.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>¿Cómo funciona?</h2>
+      <div class="faq">
+        <div class="faq__item">
+          <h3>1) Tocás “Comprar”</h3>
+          <p class="muted">Se crea el checkout y te redirige a MercadoPago.</p>
+        </div>
+        <div class="faq__item">
+          <h3>2) Pagás</h3>
+          <p class="muted">MercadoPago procesa el pago en su entorno seguro.</p>
+        </div>
+        <div class="faq__item">
+          <h3>3) Volvés y descargás</h3>
+          <p class="muted">Tu web valida el pago y habilita la descarga automáticamente.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> - Venta de libro PDF</span>
+      <span class="muted">Soporte: tu contacto</span>
+    </div>
+  </footer>
+
+  <script src="./js/index.js" type="module"></script>
+</body>
+</html>
